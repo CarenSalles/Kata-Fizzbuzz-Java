@@ -1,6 +1,6 @@
 package com.fizzbuzz;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -34,6 +34,22 @@ public class FizzBuzzTest {
     public void test_fizzbuzz_asign_value_number4() {
         FizzBuzz myFizzBuzz = new FizzBuzz(39);
         assertEquals("39", myFizzBuzz.fizzBuzz());
+    }
+
+    @Test
+    public void test_fizzbuzz_with_number() {
+        FizzBuzz myFizzBuzz = new FizzBuzz(null);
+
+        String ans = myFizzBuzz.verifyIfIncludeNumber(54);
+
+        assertEquals("Buzz", ans);
+    }
+
+    @Test
+    public void test_StartMethod_NumberDivibleBy3AndContain3() {
+        FizzBuzz fizzBuzz = new FizzBuzz(3);
+        String result = fizzBuzz.start();
+        assertEquals("Fizz", result);
     }
 
 }

@@ -3,9 +3,18 @@ package com.fizzbuzz;
 public class FizzBuzz {
 
     private Integer number;
+    private Integer TestNumber = 0;
 
     public FizzBuzz(Integer number) {
         this.number = number;
+    }
+
+    public Integer getTestNumber() {
+        return TestNumber;
+    }
+
+    public void setTestNumber(Integer testNumber) {
+        TestNumber = testNumber;
     }
 
     public Integer getNumber() {
@@ -53,5 +62,25 @@ public class FizzBuzz {
             System.out.println(number + ",");
 
         }
+    }
+
+    public String verifyIfIncludeNumber(Integer testNumber) {
+        String numberChoosed = Integer.toString(testNumber);
+
+        if (numberChoosed.contains("3"))
+            return "Fizz";
+
+        if (numberChoosed.contains("5"))
+            return "Buzz";
+
+        return numberChoosed;
+
+    }
+
+    public String start() {
+        this.fizz();
+        this.buzz();
+
+        return null;
     }
 }
